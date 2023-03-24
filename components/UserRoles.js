@@ -58,7 +58,7 @@ function UserRoles(){
         <tbody>
             {users.map(item=>{
                 return(
-                  <tr>
+                  <tr key={item._id}>
                         <td>{item.name}</td>
                         <td>{item.email}</td>
                         <td onClick={()=>handleRole(item._id,item.role)}>{item.role}</td>
