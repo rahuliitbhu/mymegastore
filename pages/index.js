@@ -15,7 +15,7 @@ const Home = ({products})=>{
       <p> ₹  {product.price}</p>
     </div>
     <div className="card-action">
-      <Link href={'/product/[id]'} as={`/product/${product._id}`}>View Product</Link>
+      <Link legacyBehavior href={'/product/[id]'} as={`/product/${product._id}`}><a>View Product</a></Link>
     </div>
   </div>
    )
@@ -30,17 +30,7 @@ const Home = ({products})=>{
 }
 
 
-export async function getStaticProps(){
- const res =  await fetch(`${baseUrl}/api/products`)
- const data = await res.json()
- return {
-   props:{
-     products:data
-   }
- }
-}
-
-// export async function getServerSideProps(){
+// export async function getStaticProps(){
 //  const res =  await fetch(`${baseUrl}/api/products`)
 //  const data = await res.json()
 //  return {
@@ -49,6 +39,16 @@ export async function getStaticProps(){
 //    }
 //  }
 // }
+
+export async function getServerSideProps(){
+ const res =  await fetch(`${baseUrl}/api/products`)
+ const data = await res.json()
+ return {
+   props:{
+     products:data
+   }
+ }
+}
 
 
 

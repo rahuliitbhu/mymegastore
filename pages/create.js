@@ -86,19 +86,19 @@ const Create = ()=>{
   
 
 
-  export async function getServerSideProps(ctx){
-    const cookie = parseCookies(ctx)
-     const user =  cookie.user ? JSON.parse(cookie.user) : ""
-    if(user.role == 'user' || user.role == '' ){
-        const {res} = ctx
-        res.writeHead(302,{Location:"/"})
-        res.end()
-    }
+  // export async function getServerSideProps(ctx){
+  //   const cookie = parseCookies(ctx)
+  //    const user =  cookie.user ? JSON.parse(cookie.user) : ""
+  //   if(user.role == 'user' || user.role == '' ){
+  //       const {res} = ctx
+  //       res.writeHead(302,{Location:"/"})
+  //       res.end()
+  //   }
   
   
-    return {
-        props:{}
-    }
-  }
+  //   return {
+  //       props:{}
+  //   }
+  // }
   
   export default Create

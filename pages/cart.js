@@ -16,7 +16,7 @@ const Cart  = ({error,products})=>{
         return(
             <div className="center-align">
                 <h3>please login to view your cart</h3>
-                <Link href="/login"><button className="btn #1565c0 blue darken-3">Login</button></Link>
+                <Link legacyBehavior href="/login"><a><button className="btn #1565c0 blue darken-3">Login</button></a></Link>
             </div>
         )
     }

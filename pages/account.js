@@ -5,7 +5,8 @@ import UserRoles from '../components/UserRoles'
 const Account = ({orders})=>{
     const orderCard = useRef(null)
     const cookie = parseCookies()
-    const user = cookie.user ? JSON.parse(cookie.user): ""
+    console.log(JSON.toString(cookie.user))
+   const user = cookie.user ? cookie.user: ""
   
     useEffect(()=>{
         M.Collapsible.init(orderCard.current)

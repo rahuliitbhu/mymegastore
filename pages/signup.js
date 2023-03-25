@@ -49,7 +49,7 @@ const Signup = ()=>{
             <button className="btn waves-effect waves-light #1565c0 blue darken-3" type="submit">signup
               <i className="material-icons right">forward</i>
           </button>
-          <Link href="/login"><h5>Already have a account ?</h5></Link>
+          <Link legacyBehavior href="/login"><a><h5>Already have a account ?</h5></a></Link>
         </form>
 
       </div>

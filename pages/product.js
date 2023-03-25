@@ -4,7 +4,7 @@ const Product = ()=>{
     return(
       <div>
         <h1>product page</h1>
-        <Link href="/">go to home</Link>
+        <Link legacyBehavior href="/"><a>go to home</a></Link>
       </div>
     )
   }
